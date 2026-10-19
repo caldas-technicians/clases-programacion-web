@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas con ul y li</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <h1>Cursos de tecnología</h1>
+    </header>
+
+    <main class="contenedor">
+
+        <!-- Barra de herramientas: buscador + formulario para agregar -->
+        <section class="herramientas">
+            <input type="search" id="buscador" placeholder="Buscar curso...">
+
+            <form id="formulario" class="formulario">
+                <input type="text" id="titulo" placeholder="Título del curso" required>
+                <input type="text" id="descripcion" placeholder="Descripción" required>
+                <select id="categoria">
+                    <option value="Web">Web</option>
+                    <option value="Seguridad">Seguridad</option>
+                    <option value="Datos">Datos</option>
+                </select>
+                <button type="submit">Agregar tarjeta</button>
+            </form>
+        </section>
+
+        <!-- cada <li> es una tarjeta -->
+        <ul class="lista-tarjetas" id="lista-tarjetas">
+
+            <li class="tarjeta">
+                <img src="https://picsum.photos/seed/html/400/220" alt="Curso de HTML">
+                <div class="tarjeta-cuerpo">
+                    <span class="etiqueta">Web</span>
+                    <h2>HTML desde cero</h2>
+                    <p>Aprende la estructura de una página web y el uso correcto de las etiquetas.</p>
+                </div>
+                <div class="tarjeta-pie">
+                    <button class="btn-favorito">♡ Favorito</button>
+                    <button class="btn-eliminar">Eliminar</button>
+                </div>
+            </li>
+
+            <li class="tarjeta">
+                <img src="https://picsum.photos/seed/css/400/220" alt="Curso de CSS">
+                <div class="tarjeta-cuerpo">
+                    <span class="etiqueta">Web</span>
+                    <h2>CSS y Flexbox</h2>
+                    <p>Dale estilo a tus páginas y organiza elementos con Flexbox y Grid.</p>
+                </div>
+                <div class="tarjeta-pie">
+                    <button class="btn-favorito">♡ Favorito</button>
+                    <button class="btn-eliminar">Eliminar</button>
+                </div>
+            </li>
+
+            <li class="tarjeta">
+                <img src="https://picsum.photos/seed/sec/400/220" alt="Curso de ciberseguridad">
+                <div class="tarjeta-cuerpo">
+                    <span class="etiqueta">Seguridad</span>
+                    <h2>Introducción a la ciberseguridad</h2>
+                    <p>Conceptos básicos de ataques, defensas y buenas prácticas.</p>
+                </div>
+                <div class="tarjeta-pie">
+                    <button class="btn-favorito">♡ Favorito</button>
+                    <button class="btn-eliminar">Eliminar</button>
+                </div>
+            </li>
+
+            <li class="tarjeta">
+                <img src="https://picsum.photos/seed/data/400/220" alt="Curso de datos">
+                <div class="tarjeta-cuerpo">
+                    <span class="etiqueta">Datos</span>
+                    <h2>Python para datos</h2>
+                    <p>Manipula y analiza información con Python paso a paso.</p>
+                </div>
+                <div class="tarjeta-pie">
+                    <button class="btn-favorito">♡ Favorito</button>
+                    <button class="btn-eliminar">Eliminar</button>
+                </div>
+            </li>
+
+        </ul>
+
+        <p id="sin-resultados" class="sin-resultados" hidden>No se encontraron cursos.</p>
+    </main>
+
+    <footer class="pie">
+        <p>Total de tarjetas: <strong id="contador">0</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

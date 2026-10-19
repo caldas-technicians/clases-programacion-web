@@ -1,0 +1,209 @@
+/* ===================== VARIABLES ===================== */
+:root {
+    --color-fondo: #f3f4f6;
+    --color-tarjeta: #ffffff;
+    --color-texto: #1f2937;
+    --color-suave: #6b7280;
+    --color-primario: #2563eb;
+    --color-peligro: #dc2626;
+    --radio: 12px;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===================== BASE ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.5;
+}
+
+.encabezado {
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 40px 16px;
+}
+
+.encabezado code {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+/* ===================== HERRAMIENTAS ===================== */
+.herramientas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+input,
+select,
+button {
+    font: inherit;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+}
+
+.formulario input {
+    flex: 1 1 200px;
+}
+
+button {
+    cursor: pointer;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* ===================== LISTA DE TARJETAS ===================== */
+/* Quitamos los puntos de la lista y la convertimos en una cuadrícula */
+.lista-tarjetas {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* ===================== TARJETA ===================== */
+.tarjeta {
+    background-color: var(--color-tarjeta);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    /* para que la imagen respete el borde redondeado */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Necesario: display:flex anula el atributo hidden que usa el buscador */
+.tarjeta[hidden] {
+    display: none;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.tarjeta-cuerpo {
+    padding: 16px;
+    flex-grow: 1;
+    /* empuja el pie hacia abajo */
+}
+
+.tarjeta-cuerpo h2 {
+    font-size: 1.15rem;
+    margin: 8px 0;
+}
+
+.tarjeta-cuerpo p {
+    color: var(--color-suave);
+    font-size: 0.95rem;
+}
+
+.etiqueta {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: #dbeafe;
+    color: var(--color-primario);
+    padding: 2px 10px;
+    border-radius: 999px;
+}
+
+.tarjeta-pie {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.tarjeta-pie button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+.btn-favorito {
+    background-color: transparent;
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+}
+
+.btn-eliminar {
+    background-color: var(--color-peligro);
+}
+
+/* Estado activo que agrega JavaScript */
+.tarjeta.favorita {
+    outline: 3px solid #facc15;
+}
+
+.tarjeta.favorita .btn-favorito {
+    background-color: #facc15;
+    border-color: #facc15;
+    color: var(--color-texto);
+}
+
+/* ===================== OTROS ===================== */
+.sin-resultados {
+    text-align: center;
+    color: var(--color-suave);
+    margin-top: 24px;
+}
+
+.pie {
+    text-align: center;
+    padding: 24px 16px;
+    color: var(--color-suave);
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (min-width: 700px) {
+    .herramientas {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #buscador {
+        flex: 0 0 250px;
+    }
+
+    .formulario {
+        flex: 1;
+    }
+}

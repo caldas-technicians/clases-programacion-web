@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lema {
+    font-style: italic;
+    color: #555;
+}
+
+#resumen {
+    font-weight: bold;
+}
+
+#programacion {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.festival {
+    background: white;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.festival img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.festival h2 {
+    font-size: 1.1rem;
+    margin: 10px 12px 4px;
+}
+
+.duracion {
+    margin: 0 12px 12px;
+    color: #555;
+}
+
+/* Lo añade inspector.js a los festivales de animación */
+.destacado {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+/* Lo añade inspector.js a los festivales de 15 min o más */
+.largo .duracion {
+    color: #b45309;
+    font-weight: bold;
+}
+
+.largo h2::after {
+    content: "Largo";
+    margin-left: 8px;
+    padding: 2px 6px;
+    font-size: 0.7rem;
+    color: white;
+    background-color: #b45309;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+#entradas {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    margin-top: 32px;
+    font-size: 0.9rem;
+    color: #555;
+}
