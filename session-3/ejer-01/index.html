@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0B0D0F">
+    <meta name="description" content="Explora programas de aprendizaje, horarios y lugares.">
+
+    <title>DevSpace | Aprende tecnología</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="encabezado">
+        <nav class="navegacion" aria-label="Navegación principal">
+
+            <a href="#" class="marca" aria-label="DevSpace, inicio">
+                <span class="marca-icono">&lt;/&gt;</span>
+                <span>Dev<span class="marca-acento">Space</span></span>
+            </a>
+
+            <button type="button" id="boton-menu" class="boton-menu" aria-expanded="false" aria-controls="menu">
+                <span class="texto-menu">Menú</span>
+                <span class="icono-menu" aria-hidden="true">☰</span>
+            </button>
+
+            <ul id="menu" class="menu">
+                <li><a href="#programa">Programa</a></li>
+                <li><a href="#horarios">Horarios</a></li>
+                <li><a href="#lugares">Lugares</a></li>
+            </ul>
+
+            <a href="#programa" class="boton-contacto">
+                Empezar <span aria-hidden="true">↗</span>
+            </a>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="programa">
+            <p class="etiqueta">
+                <span class="punto"></span>
+                APRENDE · CONSTRUYE · COMPARTE
+            </p>
+
+            <h1>
+                Tu próximo nivel
+                <span>empieza aquí.</span>
+            </h1>
+
+            <p class="descripcion">
+                Explora nuevas tecnologías, desarrolla tus habilidades
+                y convierte tus ideas en proyectos reales.
+            </p>
+
+            <div class="acciones">
+                <a href="#horarios" class="boton-principal">
+                    Explorar programa <span aria-hidden="true">↗</span>
+                </a>
+
+                <a href="#lugares" class="boton-secundario">
+                    Conocer más
+                </a>
+            </div>
+        </section>
+
+        <section class="tarjetas" aria-label="Información de la plataforma">
+
+            <article class="tarjeta" id="horarios">
+                <span class="tarjeta-icono">01</span>
+                <h2>Horarios</h2>
+                <p>Organiza tu tiempo y encuentra el momento ideal para aprender.</p>
+                <a href="#horarios">Consultar horarios →</a>
+            </article>
+
+            <article class="tarjeta" id="lugares">
+                <span class="tarjeta-icono">02</span>
+                <h2>Lugares</h2>
+                <p>Descubre los espacios disponibles para tus actividades.</p>
+                <a href="#lugares">Explorar lugares →</a>
+            </article>
+
+            <article class="tarjeta">
+                <span class="tarjeta-icono">03</span>
+                <h2>Aprendizaje</h2>
+                <p>Construye conocimientos a través de la práctica.</p>
+                <a href="#programa">Ver programa →</a>
+            </article>
+
+        </section>
+    </main>
+</body>
+
+</html>
