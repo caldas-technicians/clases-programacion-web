@@ -1,1 +1,12 @@
 *.bk.js
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+
+# Dependencias
+node_modules/
