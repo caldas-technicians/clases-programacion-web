@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscripción · Festival de la Ciudad</title>
+    <link rel="stylesheet" href="registro.css">
+    <script src="registro.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Inscripción al Festival de la Ciudad</h1>
+        <form id="registro" novalidate>
+            <label for="correo">Correo</label>
+            <input id="correo" name="correo" type="email" required aria-describedby="error-correo">
+            <p id="error-correo" class="error"></p>
+
+            <label for="clave">Contraseña (mínimo 8 caracteres)</label>
+            <input id="clave" name="clave" type="password" required minlength="8" aria-describedby="error-clave">
+            <p id="error-clave" class="error"></p>
+
+            <label for="confirmacion">Confirmar contraseña</label>
+            <input id="confirmacion" name="confirmacion" type="password" required aria-describedby="error-confirmacion">
+            <p id="error-confirmacion" class="error"></p>
+
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input id="nacimiento" name="nacimiento" type="date" required aria-describedby="error-nacimiento">
+            <p id="error-nacimiento" class="error"></p>
+
+            <label class="casilla"><input id="terminos" name="terminos" type="checkbox" required
+                    aria-describedby="error-terminos"> Acepto los términos</label>
+            <p id="error-terminos" class="error"></p>
+
+            <button type="submit">Crear cuenta</button>
+            <p id="resumen" role="status"></p>
+        </form>
+    </main>
+</body>
+
+</html>
