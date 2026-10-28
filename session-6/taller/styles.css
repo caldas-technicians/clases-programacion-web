@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #fff;
+    color: #1e1e1e;
+}
+
+main {
+    max-width: 36rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.fechas {
+    margin-top: 0;
+    color: #555;
+}
+
+section {
+    margin-top: 1.5rem;
+}
+
+/* Formulario */
+form {
+    display: grid;
+    gap: 0.25rem;
+}
+
+label {
+    margin-top: 0.75rem;
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 0.4rem;
+    border: 2px solid #888;
+    border-radius: 0.3rem;
+    font: inherit;
+}
+
+button {
+    padding: 0.4rem 0.6rem;
+    font: inherit;
+}
+
+form>button {
+    margin-top: 1rem;
+}
+
+.error {
+    margin: 0;
+    min-height: 1.2em;
+    color: #b00020;
+    font-size: 0.9rem;
+}
+
+[aria-invalid="true"] {
+    border-color: #b00020;
+}
+
+/* Filtros por día */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filtros [aria-pressed="true"] {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+/* Lista de reservas */
+.reservas {
+    list-style: none;
+    padding: 0;
+}
+
+.reservas li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.reservas span {
+    flex: 1;
+}
+
+.vacia {
+    color: #666;
+}

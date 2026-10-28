@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #fff;
+    color: #1e1e1e;
+}
+
+main {
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+label {
+    display: block;
+    margin-top: 0.75rem;
+    font-weight: bold;
+}
+
+.fila {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+input {
+    flex: 1;
+    padding: 0.4rem;
+    border: 2px solid #888;
+    border-radius: 0.3rem;
+    font: inherit;
+}
+
+button {
+    padding: 0.4rem 0.6rem;
+    font: inherit;
+}
+
+.tareas {
+    list-style: none;
+    padding: 0;
+}
+
+.tareas li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.tareas span {
+    flex: 1;
+}
+
+.hecha span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.vacia {
+    color: #666;
+}

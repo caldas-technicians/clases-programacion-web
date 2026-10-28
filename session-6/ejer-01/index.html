@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mis tareas · Festival de la Ciudad</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <header class="cabecera">
+            <h1>Mis tareas del festival</h1>
+            <button type="button" id="tema" aria-pressed="false">Tema oscuro</button>
+        </header>
+
+        <form id="nueva">
+            <label for="texto">Nueva tarea</label>
+            <div class="fila">
+                <input id="texto" name="texto" required autocomplete="off">
+                <button type="submit">Agregar</button>
+            </div>
+        </form>
+
+        <ul id="tareas" class="tareas"></ul>
+        <p id="vacia" class="vacia">No hay tareas pendientes.</p>
+    </main>
+</body>
+
+</html>

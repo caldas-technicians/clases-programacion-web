@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reservas · Festival de la Ciudad</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Reserva de talleres</h1>
+      <p class="fechas">Festival de la Ciudad · viernes 13, sábado 14 y domingo 15 de noviembre de 2026</p>
+    </header>
+
+    <section aria-labelledby="titulo-formulario">
+      <h2 id="titulo-formulario">Nueva reserva</h2>
+      <form id="reserva">
+        <!-- Escriban aquí los cinco campos del taller: nombre, correo, taller, dia y personas -->
+
+        <button type="submit">Reservar</button>
+        <p id="resumen" role="status"></p>
+      </form>
+    </section>
+
+    <section aria-labelledby="titulo-reservas">
+      <h2 id="titulo-reservas">Mis reservas</h2>
+      <div id="filtros" class="filtros" role="group" aria-label="Filtrar por día"></div>
+      <ul id="reservas" class="reservas"></ul>
+      <p id="sin-reservas" class="vacia">Todavía no hay reservas.</p>
+    </section>
+  </main>
+</body>
+</html>
